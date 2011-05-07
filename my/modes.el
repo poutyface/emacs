@@ -27,5 +27,8 @@
 
 
 ; rhtml
-(setq auto-mode-alist (cons '("\\.html\\.erb" . nxml-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.erb" . nxml-mode) auto-mode-alist))
+(add-to-list 'load-path "~/.emacs.d/vendor/rhtml-mode")
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook (lambda () (rinari-launch)))
+;(setq auto-mode-alist (cons '("\\.html\\.erb" . nxml-mode) auto-mode-alist))
+;(setq auto-mode-alist (cons '("\\.erb" . nxml-mode) auto-mode-alist))
