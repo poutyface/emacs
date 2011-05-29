@@ -22,6 +22,7 @@
 ; ruby
 (require 'ruby-mode)
 (setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.ru" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.gemspec" . ruby-mode) auto-mode-alist))
 
@@ -32,3 +33,8 @@
 (add-hook 'rhtml-mode-hook (lambda () (rinari-launch)))
 ;(setq auto-mode-alist (cons '("\\.html\\.erb" . nxml-mode) auto-mode-alist))
 ;(setq auto-mode-alist (cons '("\\.erb" . nxml-mode) auto-mode-alist))
+
+;markdown
+(add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
+(require 'markdown-mode)
+(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
